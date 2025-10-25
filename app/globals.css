@@ -487,3 +487,14 @@
 .scrollbar-hide-default::-webkit-scrollbar-thumb:hover {
     background-color: #9095A1;
 }
+@keyframes shine {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+.animate-shine::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    animation: shine 2.2s infinite linear;
+}
