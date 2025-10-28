@@ -1,0 +1,44 @@
+"use client";
+import React from "react";
+
+export default function MoreIcon(props: React.SVGProps<SVGSVGElement>) {
+    return (
+        <svg
+            width="14"
+            height="27"
+            viewBox="0 0 14 27"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            {...props}
+        >
+            <rect width="14" height="27" rx="7" fill="black" fillOpacity="0.01" />
+            <rect
+                x="0.5"
+                y="0.5"
+                width="13"
+                height="26"
+                rx="6.5"
+                stroke="#F27303"
+                strokeOpacity="0.2"
+            />
+            <path
+                d="M6.93335 20.8346C6.93335 21.5073 6.72442 22.0526 6.46668 22.0526C6.20895 22.0526 6.00002 21.5073 6.00002 20.8346C6.00002 20.1619 6.20895 19.6165 6.46668 19.6165C6.72442 19.6165 6.93335 20.1619 6.93335 20.8346Z"
+                stroke="#F27303"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <path
+                d="M6.93335 13.5263C6.93335 14.199 6.72442 14.7444 6.46668 14.7444C6.20895 14.7444 6.00002 14.199 6.00002 13.5263C6.00002 12.8536 6.20895 12.3083 6.46668 12.3083C6.72442 12.3083 6.93335 12.8536 6.93335 13.5263Z"
+                stroke="#F27303"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <path
+                d="M6.93335 6.21805C6.93335 6.89075 6.72442 7.43609 6.46668 7.43609C6.20895 7.43609 6.00002 6.89075 6.00002 6.21805C6.00002 5.54534 6.20895 5 6.46668 5C6.72442 5 6.93335 5.54534 6.93335 6.21805Z"
+                stroke="#F27303"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+        </svg>
+    );
+}
