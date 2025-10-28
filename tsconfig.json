@@ -14,7 +14,7 @@
     "jsx": "preserve",
     "incremental": true,
     "plugins": [
-      {
+      {  "react-native": "react-native-web",
         "name": "next"
       }
     ],

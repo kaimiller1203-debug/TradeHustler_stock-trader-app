@@ -24,7 +24,7 @@ const SignUp = () => {
             fullName: '',
             email: '',
             password: '',
-            country: 'us',
+            country: 'US',
             investmentGoals: 'Growth',
             riskTolerance: 'Medium',
             preferredIndustry: 'Technology',
@@ -34,11 +34,9 @@ const SignUp = () => {
 
     const passwordValue = watch("password") || "";
     const passwordStrength = getPasswordStrength(passwordValue);
-
-
     const onSubmit = async (data: SignUpFormData) => {
         try {
-            console.log(data);
+
         } catch (e) {
             console.error(e);
         }

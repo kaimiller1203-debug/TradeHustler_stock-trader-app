@@ -1,20 +1,26 @@
-export type PostAttachment =
-    | { type: 'image'; url: string }
-    | { type: 'video'; url: string }
-    | { type: 'link'; url: string; title?: string };
+// Basic post + alert types used across feed & composer
 
-export type Post = {
+export type AlertSide = "buy" | "sell";
+export type EntryType = "market" | "limit" | "stop";
+
+export interface AlertData {
+    symbol: string;         // e.g. "AAPL", "BTCUSD", "GBPJPY"
+    side: AlertSide;        // "buy" | "sell"
+    tp?: number;            // take profit
+    sl?: number;            // stop loss
+    entryType: EntryType;   // "market" | "limit" | "stop"
+    premium?: boolean;      // if true -> hide details & show Buy Now CTA
+}
+
+export interface Post {
     id: string;
-    userId: string;
-    username: string;
-    avatarUrl?: string;
-    createdAt: string; // ISO string
-    html: string;      // formatted content (bold/italic/underline/color)
-    attachments?: PostAttachment[];
-    metrics: {
-        likes: number;
-        replies: number;
-        reposts: number;
+    user: {
+        name: string;
+        handle: string;
+        avatarUrl?: string;
     };
-    animation?: 'none' | 'jump'; // simple “text jump” animation for the whole post
-};
+    createdAt: string;  // ISO string
+    text?: string;
+    mediaUrl?: string;
+    alert?: AlertData;  // optional alert payload
+}
